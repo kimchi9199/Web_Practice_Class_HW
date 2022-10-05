@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- TABLE -->
+    <table border="1">
+        <tr>
+            <th>Order</th>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nguyen Van A</td>
+            <td>PMCL</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Nguyen Van B</td>
+            <td>KTPM</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="2">None</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>STT</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td colspan="2">None</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>STT</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td>Nguyen Van A</td>
+            <td>Nguyen Van B</td>
+            <td rowspan="2">None</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>PMCL</td>
+            <td>KTPM</td>
+        </tr>
+    </table>
+
+    <!-- FORM -->
+    <form action="" method="GET" accept-charset="UTF-8">
+        <label for="full-name">Full Name:</label>
+        <input type="text" name="full-name" value="" placeholder="Your Full Name">
+        <label for="about-yourself">About you:</label>
+        <textarea name="about-yourself" id="" cols="30" rows="10"></textarea>
+        <button>Clear all data</button>
+        <input type="submit" value="Send data">
+        
+        <select name="" id="">
+            <optgroup label="UIT">
+                <option value="">DAA</option>
+                <option value="">Course</option>
+            </optgroup>
+            <optgroup lable="Social Network">
+                <option value="">FB</option>
+                <option value="">Zalo</option>
+            </optgroup>
+        </select>
+    </form>
+</body>
+</html>

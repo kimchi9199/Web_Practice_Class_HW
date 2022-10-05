@@ -1,0 +1,48 @@
+.profile {
+    width: 1000px;
+    /* border: 1px solid black; */
+    /* margin: 1rem;
+    padding: 2rem 2rem; */
+    /* text-align: center; */
+    /* justify-content: center; */   
+}
+
+.profile h1, .profile p{
+    text-align: center;
+}
+
+.profile .about-me, .profile .avatar, .profile .detail{
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* padding: 1rem 1rem; */
+    vertical-align: middle;
+    padding-left: 15px;
+    width: 290px;
+    justify-content: center;
+}
+
+.detail p, .about-me p {
+    text-align: left;
+}
+
+.experiences h1, .abilities h1 {
+    text-align: center;
+}
+
+.education, .working-experiences, .abilities, .skills, .languages{
+    width: 1000px;
+}
+
+.edu-time, .edu-details, .work-time, .work-details, .skills-1, .skills-2, .languages-1, .languages-2 {
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* padding: 1rem 1rem; */
+    vertical-align: middle;
+    padding-left: 15px;
+    width: 290px;
+    justify-content: center;
+}
+
+.skills .project-but{
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 2.1</title>
+    </head>
+    <body>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#submit").click(function(event){
+                    $('#submit').val('Processing …');
+                    $('SubmitForm').submit();
+                });  
+            });
+        </script>
+
+        <form  id="SubmitForm" >
+            <input  type="submit" value="Submit"  id='submit'> 
+        </form>
+    </body>
+</html>

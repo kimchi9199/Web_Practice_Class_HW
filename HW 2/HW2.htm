@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 3</title>
+    <meta charset="UTF-8" />
+
+    <script>
+        let isChosen;
+        function playSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            if (!audio) return null;
+            key.classList.add("playing");
+            audio.currentTime = 0;
+            audio.play();
+            setTimeout(function() {
+                key.classList.remove("playing");
+            }, 100);
+        }
+
+        function ClickToPlaySound(id) {
+            if (isChosen == true) {
+                setTimeout (function (){
+                    document.getElementById(id).play();
+                }, 100);  
+            }
+           
+        }
+        // window.addEventListener("click", ClickToPlaySound);
+
+        function PlayMethod() {
+            let promt;
+            let method = document.getElementById("playmethod").value;
+            switch(method) {
+                case "1":
+                    promt = "You chose 1";
+                    isChosen = false;
+                    window.addEventListener("keydown", playSound);
+                    break;
+                case "2":
+                    promt = "You chose 2";
+                    isChosen = true;
+                    window.removeEventListener("keydown", playSound);
+                    break; 
+                default:
+                    promt = "Please choose 1 or 2";
+            }
+            document.getElementById("promt").innerHTML = promt;
+        }
+    </script>
+
+    <link rel="stylesheet" href="./HW2.css"> 
+  </head>
+
+  <body>
+    <center>
+        <h1>DRUM KIT</h1>
+        <h3>Choose type of method you want to play drum</h3>
+        <h2>1. Key</h2>
+        <h2>2. Mouse Click</h2>
+        <input id="playmethod" type="text">
+        <button onclick="PlayMethod()">OK</button>
+        <h2 id="promt"></h2>
+    </center>
+    <div id="app">
+      <div class="keys">
+        <div data-key="87" class="key" style="background-image: url('./assets/images/images/tom1.png')" onclick="ClickToPlaySound('tom1');">
+            <kbd>W</kbd> <span class="sound">tom-1</span>
+        </div>
+
+        <div data-key="65" class="key" style="background-image: url('./assets/images/images/tom2.png')" onclick="ClickToPlaySound('tom2');">
+            <kbd>A</kbd> <span class="sound">tom-2</span>
+        </div>
+
+        <div data-key="83" class="key" style="background-image: url('./assets/images/images/tom3.png')" onclick="ClickToPlaySound('tom3');">
+            <kbd>S</kbd> <span class="sound">tom-3</span>
+        </div>
+
+        <div data-key="68" class="key" style="background-image: url('./assets/images/images/tom4.png')" onclick="ClickToPlaySound('tom4');">
+            <kbd>D</kbd> <span class="sound">tom-4</span>
+        </div>
+
+        <div data-key="74" class="key" style="background-image: url('./assets/images/images/kick.png')" onclick="ClickToPlaySound('kick-bass');">
+            <kbd>J</kbd> <span class="sound">kick-bass</span>
+        </div>
+
+        <div data-key="75" class="key" style="background-image: url('./assets/images/images/crash.png')" onclick="ClickToPlaySound('crash');">
+          <kbd>K</kbd> <span class="sound">crash</span>
+        </div>
+        
+        <div data-key="76" class="key" style="background-image: url('./assets/images/images/snare.png')" onclick="ClickToPlaySound('snare');">
+          <kbd>L</kbd> <span class="sound">snare</span>
+        </div>
+
+        <div data-key="73" class="key" style="background-image: url('./assets/images/images/snare.png')" onclick="ClickToPlaySound('hithatclose');">
+            <kbd>I</kbd> <span class="sound">Hit-Hat Close</span>
+        </div>
+
+        <div data-key="86" class="key" style="background-image: url('./assets/images/images/snare.png')" onclick="ClickToPlaySound('hithatopen');">
+            <kbd>V</kbd> <span class="sound">Hit-Hat Open</span>
+        </div>
+
+        <div data-key="66" class="key" style="background-image: url('./assets/images/images/snare.png')" onclick="ClickToPlaySound('tom-mid');">
+            <kbd>B</kbd> <span class="sound">Tom-mid</span>
+        </div>
+        
+      </div>
+      <audio id="crash" data-key="75" src="assets/sounds/sounds/crash.mp3"></audio>
+      <audio id="kick-bass" data-key="74" src="assets/sounds/sounds/kick-bass.mp3"></audio>
+      <audio id="snare" data-key="76" src="assets/sounds/sounds/snare.mp3"></audio>
+      <audio id="tom1" data-key="87" src="assets/sounds/sounds/tom-1.mp3"></audio>
+      <audio id="tom2" data-key="65" src="assets/sounds/sounds/tom-2.mp3"></audio>
+      <audio id="tom3" data-key="83" src="assets/sounds/sounds/tom-3.mp3"></audio>
+      <audio id="tom4" data-key="68" src="assets/sounds/sounds/tom-4.mp3"></audio>
+      <audio id="hithatclose" data-key="73" src="assets/sounds/sounds/src_01-javascript-drum-kit_sounds_hihat-close.wav"></audio>
+      <audio id="hithatopen" data-key="86" src="assets/sounds/sounds/src_01-javascript-drum-kit_sounds_hihat-open.wav"></audio>
+      <audio id="tom-mid" data-key="66" src="assets/sounds/sounds/src_01-javascript-drum-kit_sounds_tom-mid.wav"></audio>
+    </div>
+  </body>
+</html>

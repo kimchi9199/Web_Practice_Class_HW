@@ -1,0 +1,78 @@
+.profile {
+    width: 1000px;
+    /* border: 1px solid black; */
+    /* margin: 1rem;
+    padding: 2rem 2rem; */
+    /* text-align: center; */
+    /* justify-content: center; */   
+}
+
+.profile h1, .profile p{
+    text-align: center;
+}
+
+.profile .about-me, .profile .avatar, .profile .detail{
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* padding: 1rem 1rem; */
+    vertical-align: middle;
+    padding-left: 15px;
+    width: 290px;
+    justify-content: center;
+}
+
+.detail p, .about-me p {
+    text-align: left;
+}
+
+.experiences h1, .abilities h1 {
+    text-align: center;
+}
+
+.education, .working-experiences, .abilities, .skills, .languages{
+    width: 1000px;
+}
+
+.edu-time, .edu-details, .work-time, .work-details, .skills-1, .skills-2, .languages-1, .languages-2 {
+    display: inline-block;
+    /* border: 1px solid red; */
+    /* padding: 1rem 1rem; */
+    vertical-align: middle;
+    padding-left: 15px;
+    width: 290px;
+    justify-content: center;
+}
+
+.skills .project-but{
+    text-align: center;
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }

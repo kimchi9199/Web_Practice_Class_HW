@@ -9,12 +9,12 @@ const port = process.env.PORT || 9000
 const connection_url = 'mongodb+srv://KimLe:kimle123@cluster0.c6nnpzt.mongodb.net/MessagingApp'
 
 const pusher = new Pusher({
-    appId: 'your-app-id',
-    key: 'your-key',
-    secret: 'your',
-    cluster: 'your',
+    appId: "1521621",
+    key: "df2937fe32aa5605334e",
+    secret: "c321a742c13d00a36a29",
+    cluster: "ap1",
     useTLS: true
-});
+  });
 
 app.use(express.json())
 app.use(Cors)

@@ -3,7 +3,7 @@ import {Avatar, IconButton} from '@material-ui/core';
 import {AttachFile, MoreVert, SearchOutlined, InsertEmoticon} from '@material-ui/icons';
 import MicIcon from '@material-ui/icons/Mic';
 // import './Chat.css'
-import axios from './axios'
+import axios from 'axios'
 import {useStateValue} from './StateProvider'
 
 const Chat = ({messages}) => {

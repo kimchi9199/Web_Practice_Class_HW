@@ -13,11 +13,11 @@ function App() {
   const [messages, setMessages] = useState([])
   const [{user}, dispatch] = useStateValue();
 
-  useEffect(() =>  {
-    axios.get('/messages/sync').then(res  => {
-      setMessages(res.data)
-    })
-  }, [])
+  // useEffect(() =>  {
+  //   axios.get('/messages/sync').then(res  => {
+  //     setMessages(res.data)
+  //   })
+  // }, [])
 
   useEffect(() => {
     const pusher = new Pusher('9e297c1b3f7413a26cce', {

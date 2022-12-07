@@ -1,8 +1,8 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import Cors from 'cors';
-import Messages from './dbMessages';
-import Pusher from 'puhser';
+const express = require('express'); 
+const mongoose = require('mongoose'); 
+const Cors = require('cors');
+const Messages = require('./dbMessages');
+const Pusher = require('pusher');
 
 const app = express()
 const port = process.env.PORT || 9000
@@ -21,7 +21,6 @@ app.use(Cors)
 
 mongoose.connect(connection_url, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true
 })
 

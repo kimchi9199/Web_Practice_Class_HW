@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const messagingSchema = mongoose.Schema({
     message: String,
@@ -7,4 +7,4 @@ const messagingSchema = mongoose.Schema({
     received: Boolean
 })
 
-export default mongoose.model('messagingmessages', messagingSchema)
+module.exports = mongoose.model('messagingmessages', messagingSchema)

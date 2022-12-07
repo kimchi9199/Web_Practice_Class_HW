@@ -41,7 +41,7 @@ db.once('open', () => {
                 received: messageDetails.received
             })
         } else {
-            console.log('Error triggering Puhser')
+            console.log('Error triggering Pusher')
         }
     })
 })
